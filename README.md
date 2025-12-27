@@ -70,19 +70,19 @@ mikrokontroler/
 ## ⚙️ Prasyarat & Instalasi
 
 1. Hardware Setup
-Siapkan board ESP32.
-Rangkai motor DC dan sensor sesuai skema (lihat folder masing-masing modul).
+* Siapkan board ESP32.
+* Rangkai motor DC dan sensor sesuai skema (lihat folder masing-masing modul).
 2. Software Setup (PC)
-Pastikan Python terinstal untuk menjalankan skrip training dan dashboard.
+* Pastikan Python terinstal untuk menjalankan skrip training dan dashboard.
 ```bash
 pip install tensorflow numpy pandas paho-mqtt matplotlib
 ```
 3. Arduino IDE Setup
-Install Arduino IDE.
-Tambahkan Board Manager untuk ESP32.
-Install library yang dibutuhkan melalui Library Manager:
-PubSubClient (untuk MQTT)
-TensorFlowLite_ESP32 (untuk modul AI)
+* Install Arduino IDE.
+* Tambahkan Board Manager untuk ESP32.
+* Install library yang dibutuhkan melalui Library Manager:
+* PubSubClient (untuk MQTT)
+* TensorFlowLite_ESP32 (untuk modul AI)
 
 ## 🚀 Contoh Penggunaan (Modul AI)
 Untuk menjalankan proyek Mikrokontroler with AI:
@@ -91,17 +91,17 @@ Untuk menjalankan proyek Mikrokontroler with AI:
 cd "EAS-Mikrokontroler/3. Mikrokontroler with Ai"
 python train_lstm_pwm_ff.py
 ```
-Output: File model .tflite.
+* Output: File model .tflite.
 
 2. Konversi Model: Ubah model menjadi file header C agar bisa dibaca ESP32.
 ```bash
 python tflite_to_header.py
 ```
-Output: File .h berisi array hex model.
+* Output: File .h berisi array hex model.
 
 3. Flash ke ESP32:
-Buka esp32_lstm_ff_pid.ino di Arduino IDE.
-Pastikan file .h hasil konversi berada satu folder dengan file .ino.
-Upload ke board ESP32.
+* Buka esp32_lstm_ff_pid.ino di Arduino IDE.
+* Pastikan file .h hasil konversi berada satu folder dengan file .ino.
+* Upload ke board ESP32.
 
 Monitoring: Buka Serial Monitor (Baudrate 115200) untuk melihat hasil prediksi inferensi AI secara real-time.
