@@ -104,4 +104,4 @@ python tflite_to_header.py
 * Pastikan file .h hasil konversi berada satu folder dengan file .ino.
 * Upload ke board ESP32.
 
-Monitoring: Buka Serial Monitor (Baudrate 115200) untuk melihat hasil prediksi inferensi AI secara real-time.
+4. Monitoring: Buka Serial Monitor (Baudrate 115200) untuk melihat hasil prediksi inferensi AI secara real-time.
